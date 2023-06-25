@@ -1,0 +1,67 @@
+.practiceCard {
+  background-color: var(--dark-gray);
+  padding: 55px 50px 70px;
+  margin-bottom: 30px;
+
+  &:hover {
+    .button {
+      background-color: var(--main-yellow);
+      color: var(--dark-gray);
+    }
+  }
+
+  h5 {
+    text-transform: capitalize;
+    margin-bottom: 10px;
+
+    &:hover {
+      color: var(--main-yellow);
+    }
+  }
+  .footer {
+    border-top: 1px solid #3a4553;
+    margin-top: 25px;
+    padding-top: 30px;
+  }
+}
+
+// RESPONSIVE
+@media screen and (max-width: 1279.98px) {
+  .practiceCard {
+    padding: 35px 20px 30px;
+    h5 {
+      font-size: 28px;
+    }
+    .footer {
+      flex-direction: column;
+      align-items: flex-start;
+
+      img {
+        width: 40px;
+      }
+      .button {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 991.98px) {
+  .practiceCard {
+    h5 {
+      font-size: 26px;
+    }
+    & > p {
+      font-size: 18px;
+    }
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  .footer img {
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 478.98px) {
+}

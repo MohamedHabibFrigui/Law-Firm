@@ -12,6 +12,18 @@
     padding: 28px 123px 29px 123px;
   }
 
+  &.default {
+    background-color: var(--main-black);
+    color: var(--white);
+    padding: 13px 42px;
+    font-size: 20px;
+
+    &:hover {
+      background-color: var(--main-yellow);
+      color: var(--main-black);
+    }
+  }
+
   &.filled {
     background-color: var(--main-yellow);
     color: var(--dark-gray);
@@ -45,6 +57,16 @@
   }
 }
 
+@media screen and (max-width: 1279.98px) {
+  .button.default {
+    padding: 13px 30px;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  .button.default {
+    font-size: 18px;
+  }
+}
 @media screen and (max-width: 767.98px) {
   .button {
     padding: 20px 30px;
