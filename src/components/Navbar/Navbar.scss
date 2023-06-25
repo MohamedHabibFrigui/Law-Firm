@@ -1,5 +1,5 @@
 .navbar {
-  background-color: var(--main-gray);
+  background-color: transparent;
   padding: 25px 0;
 
   header h1 {
@@ -250,8 +250,6 @@
       img {
         height: 100%;
       }
-      // height: 90%;
-      // object-fit: cover;
     }
 
     h1 {

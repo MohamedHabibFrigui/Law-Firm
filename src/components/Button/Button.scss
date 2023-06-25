@@ -15,6 +15,12 @@
   &.filled {
     background-color: var(--main-yellow);
     color: var(--dark-gray);
+    border: 1px solid var(--main-yellow);
+
+    &:hover {
+      background-color: transparent;
+      color: var(--main-yellow);
+    }
   }
 
   &.outline {
