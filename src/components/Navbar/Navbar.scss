@@ -1,0 +1,261 @@
+.navbar {
+  background-color: var(--main-gray);
+  padding: 25px 0;
+
+  header h1 {
+    margin-left: 7px;
+  }
+
+  main {
+    padding: 25px 0;
+    border-top: 0.5px solid #4e555f;
+    border-bottom: 0.5px solid #4e555f;
+    nav {
+      a {
+        margin-right: 35px;
+        transition: var(--main-transition);
+        text-transform: capitalize;
+
+        &.active,
+        &:hover {
+          color: var(--main-yellow);
+        }
+        p {
+          display: inline;
+          font-size: 23px;
+        }
+      }
+      .pages {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+        position: relative;
+        padding: 10px 0;
+        margin-right: 35px;
+
+        span {
+          color: var(--white);
+          font-size: 23px;
+          font-family: "Outfit", sans-serif;
+          transition: var(--main-transition);
+
+          &:hover {
+            color: var(--main-yellow);
+          }
+        }
+
+        &:hover {
+          .mega-menu-content {
+            display: block;
+            z-index: 10;
+          }
+        }
+
+        .mega-menu-content {
+          position: absolute;
+          top: 50px;
+          background-color: var(--white);
+          padding: 30px 20px;
+          width: 263%;
+          display: none;
+
+          li:not(:last-of-type) {
+            margin-bottom: 20px;
+          }
+
+          a {
+            color: var(--main-black);
+            font-size: 20px;
+
+            &:hover {
+              color: var(--main-yellow);
+            }
+          }
+        }
+      }
+    }
+    .burger-menu {
+      width: 60px;
+      height: 60px;
+      background-color: var(--main-yellow);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      display: none;
+
+      &.clicked {
+        background-color: var(--main-black);
+      }
+
+      .menu-icon {
+        color: var(--white);
+        font-size: 23px;
+      }
+    }
+    .navContact {
+      width: 550px;
+      .navContactCard {
+        .icon {
+          width: 62px;
+          height: 62px;
+          margin-right: 10px;
+          border: 2px solid var(--main-yellow);
+          border-radius: 50%;
+
+          .phoneIcon,
+          .mailIcon {
+            color: var(--main-yellow);
+          }
+          .mailIcon {
+            font-size: 20px;
+          }
+        }
+        .navContactCardInfo {
+          p {
+            color: var(--white);
+            font-size: 22px;
+            cursor: pointer;
+            transition: var(--main-transition);
+
+            &:hover {
+              color: var(--main-yellow);
+            }
+            &.title {
+              font-size: 18px;
+              margin-bottom: 5px;
+              color: var(--main-yellow);
+              cursor: default;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// RESPONSIVE
+@media screen and (max-width: 1279.98px) {
+  .navbar main .navContact {
+    width: 350px;
+    .icon {
+      display: none;
+    }
+  }
+}
+@media screen and (max-width: 991.98px) {
+  .navbar {
+    header {
+      flex-direction: column;
+      justify-content: center;
+
+      .button {
+        margin: 15px 0 30px;
+      }
+    }
+    main {
+      nav {
+        width: 60%;
+        padding: 20px;
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: var(--main-black);
+        position: absolute;
+        top: 240px;
+        left: 5%;
+        z-index: 10;
+        transition: var(--main-transition);
+        visibility: hidden;
+        opacity: 0;
+        transition: var(--main-transition);
+
+        &.visible {
+          visibility: visible;
+          opacity: 1;
+          top: 330px;
+          left: 5%;
+        }
+
+        a {
+          font-size: 20px;
+          margin: 10px 0;
+        }
+
+        .pages {
+          display: block;
+
+          .mega-menu-content {
+            background-color: var(--main-black);
+            position: static;
+            top: 0;
+            padding: 0;
+
+            li {
+              margin: 15px 10px;
+
+              &:last-of-type {
+                margin-bottom: 0;
+              }
+            }
+            a {
+              color: var(--white);
+              font-size: 18px;
+            }
+          }
+        }
+      }
+      .burger-menu {
+        display: flex;
+        z-index: 11;
+      }
+      .navContact {
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        width: fit-content;
+        .navContactCardInfo {
+          p {
+            font-size: 20px !important;
+
+            &.title {
+              display: none;
+              font-size: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .navbar main {
+    nav {
+      width: 90%;
+
+      &.visible {
+        top: 320px;
+      }
+    }
+    .navContact {
+      display: none;
+    }
+  }
+}
+@media screen and (max-width: 478.98px) {
+  .navbar header .logo {
+    .logoIcon {
+      height: 50px;
+
+      img {
+        height: 100%;
+      }
+      // height: 90%;
+      // object-fit: cover;
+    }
+
+    h1 {
+      font-size: 40px;
+    }
+  }
+}
