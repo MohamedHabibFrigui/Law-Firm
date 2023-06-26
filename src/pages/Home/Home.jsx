@@ -5,6 +5,7 @@ import PracticeSection from "../../components/PracticeSection/PracticeSection";
 import HelpSection from "../../components/HelpSection/HelpSection";
 import HistorySection from "../../components/HistorySection/HistorySection";
 import ReviewsSection from "../../components/ReviewsSection/ReviewsSection";
+import TeamSection from "../../components/TeamSection/TeamSection";
 
 const Home = () => {
   return (
@@ -14,7 +15,8 @@ const Home = () => {
       <PracticeSection />
       <HelpSection /> */}
       {/* <HistorySection /> */}
-      <ReviewsSection />
+      {/* <ReviewsSection /> */}
+      <TeamSection />
     </div>
   );
 };
