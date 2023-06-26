@@ -1,0 +1,50 @@
+.reviewCard {
+  .person {
+    justify-content: flex-start;
+    img {
+      width: 84px;
+      height: 84px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-right: 20px;
+    }
+  }
+  .quote {
+    background-color: var(--main-gray);
+    padding: 70px 45px 60px;
+    margin-top: 20px;
+    border-top-left-radius: 40px;
+
+    .quoteIcon {
+      font-size: 35px;
+      color: var(--main-yellow);
+      margin-bottom: 20px;
+    }
+    p {
+      line-height: 1.6;
+    }
+  }
+
+  &.reversed {
+    display: flex;
+    flex-direction: column-reverse;
+
+    .quote {
+      margin: 0 0 20px 0;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 40px;
+    }
+  }
+}
+
+@media screen and (max-width: 1279.98px) {
+  .reviewCard {
+    background-color: var(--main-gray);
+    padding: 70px 45px 60px;
+    margin-bottom: 20px;
+
+    .quote {
+      padding: 0;
+    }
+  }
+}

@@ -4,6 +4,7 @@ import IntroSection from "../../components/IntroSection/IntroSection";
 import PracticeSection from "../../components/PracticeSection/PracticeSection";
 import HelpSection from "../../components/HelpSection/HelpSection";
 import HistorySection from "../../components/HistorySection/HistorySection";
+import ReviewsSection from "../../components/ReviewsSection/ReviewsSection";
 
 const Home = () => {
   return (
@@ -12,7 +13,8 @@ const Home = () => {
       <IntroSection />
       <PracticeSection />
       <HelpSection /> */}
-      <HistorySection />
+      {/* <HistorySection /> */}
+      <ReviewsSection />
     </div>
   );
 };
