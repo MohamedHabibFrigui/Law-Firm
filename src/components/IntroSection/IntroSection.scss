@@ -96,12 +96,6 @@
     padding: 100px 0;
 
     .container .right {
-      h3 {
-        font-size: 36px;
-      }
-      & > p {
-        font-size: 18px;
-      }
       .cards {
         flex-direction: column;
         .card1,
@@ -121,9 +115,6 @@
       max-width: 100%;
     }
     .right {
-      h3 {
-        font-size: 32px;
-      }
       .person {
         h4 {
           font-size: 30px;
@@ -136,9 +127,6 @@
 @media screen and (max-width: 478.98px) {
   .introSection .container {
     .right {
-      h3 {
-        font-size: 30px;
-      }
       .person {
         flex-direction: column;
         align-items: flex-start;

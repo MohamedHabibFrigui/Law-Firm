@@ -6,7 +6,10 @@ const HeroSection = () => {
   return (
     <section className="heroSection">
       <Navbar />
-      <div className="container flexBetween" style={{ height: "100vh" }}>
+      <div
+        className="container flexBetween"
+        style={{ height: "100vh", zIndex: 1 }}
+      >
         <div className="left">
           <img src="sep.svg" alt="sep" />
           <h1>We're Group Of Certified Law Professionals</h1>

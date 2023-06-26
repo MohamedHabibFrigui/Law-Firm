@@ -31,9 +31,13 @@ li {
   list-style-type: none;
   font-family: "Outfit", sans-serif;
 }
-h1,
-h2 {
+h1 {
   font-size: 65px;
+  font-weight: 700;
+  color: var(--white);
+}
+h2 {
+  font-size: 50px;
   font-weight: 700;
   color: var(--white);
 }
@@ -72,4 +76,26 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+// RESPONSIVE
+@media screen and (max-width: 991.98px) {
+  p {
+    font-size: 18px;
+  }
+  h3 {
+    font-size: 36px;
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  h3 {
+    font-size: 32px;
+  }
+}
+
+@media screen and (max-width: 478.98px) {
+  h3 {
+    font-size: 30px;
+  }
 }
