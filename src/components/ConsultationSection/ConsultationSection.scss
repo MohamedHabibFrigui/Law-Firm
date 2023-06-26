@@ -1,0 +1,127 @@
+.consultationSection {
+  padding: var(--section-padding);
+  background-color: var(--dark-gray);
+
+  .container {
+    .left {
+      width: 48%;
+      .sep {
+        margin: 15px 30px;
+      }
+      p {
+        margin: 20px 0 35px;
+      }
+      .button {
+        margin-left: 0;
+      }
+    }
+    .right {
+      background-color: var(--white);
+      padding: 40px;
+      width: 48%;
+
+      .rightContent {
+        padding: 30px 40px 60px;
+        border: 14px solid var(--light-gray);
+
+        h3 {
+          color: var(--main-black);
+        }
+        .consultationDesc {
+          color: #909090;
+          margin: 10px 0 20px;
+        }
+        .callUs {
+          width: fit-content;
+
+          .phone {
+            width: 70px;
+            height: 70px;
+            background-color: var(--main-yellow);
+            margin-right: 10px;
+
+            .phoneIcon {
+              font-size: 25px;
+              color: var(--white);
+            }
+          }
+          .info {
+            p {
+              color: var(--main-black);
+
+              &.title {
+                font-size: 18px;
+                font-weight: 500;
+              }
+              &.phoneNumber {
+                font-size: 30px;
+                font-weight: 600;
+                cursor: pointer;
+                transition: var(--main-transition);
+
+                &:hover {
+                  color: var(--main-yellow);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// RESPONSIVE
+
+@media screen and (max-width: 991.98px) {
+  .consultationSection .container {
+    flex-direction: column;
+
+    .left,
+    .right {
+      width: 100%;
+    }
+    .right {
+      margin-top: 40px;
+
+      .rightContent .callUs .info {
+        .title {
+          font-size: 18px;
+        }
+        .phoneNumber {
+          font-size: 28px;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .consultationSection .container .right {
+    padding: 20px;
+
+    .rightContent {
+      padding: 10px 20px 40px;
+
+      .callUs {
+        flex-direction: column;
+        align-items: flex-start;
+
+        .info {
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 478.98px) {
+  .consultationSection .container .right {
+    .rightContent {
+      padding: 0 0 10px;
+      border: none;
+
+      .callUs .info .phoneNumber {
+        font-size: 26px;
+      }
+    }
+  }
+}

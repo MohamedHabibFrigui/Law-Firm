@@ -22,11 +22,6 @@
 }
 
 // RESPONSIVE
-
-@media screen and (max-width: 1279.98px) {
-  .teamSection .container .teamList {
-  }
-}
 @media screen and (max-width: 991.98px) {
   .teamSection .container .teamList {
     grid-template-columns: repeat(1, 1fr);
