@@ -7,18 +7,20 @@ import HistorySection from "../../components/HistorySection/HistorySection";
 import ReviewsSection from "../../components/ReviewsSection/ReviewsSection";
 import TeamSection from "../../components/TeamSection/TeamSection";
 import ConsultationSection from "../../components/ConsultationSection/ConsultationSection";
+import AppointmentSection from "../../components/AppointmentSection/AppointmentSection";
 
 const Home = () => {
   return (
     <div className="homePage">
-      <HeroSection />
+      {/* <HeroSection />
       <IntroSection />
       <PracticeSection />
       <HelpSection />
       <HistorySection />
       <ReviewsSection />
       <TeamSection />
-      <ConsultationSection />
+      <ConsultationSection /> */}
+      <AppointmentSection />
     </div>
   );
 };

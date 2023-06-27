@@ -1,0 +1,142 @@
+.appointmentSection {
+  padding: var(--section-padding);
+  background: url(/formBg.jpg) 50% 50% / cover no-repeat;
+
+  .container {
+    background-color: var(--dark-gray);
+    padding: 70px;
+
+    form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 35px;
+      grid-template-areas:
+        "name email"
+        "phone subject"
+        "message message"
+        "button button";
+
+      .name {
+        grid-area: name;
+      }
+      .email {
+        grid-area: email;
+      }
+      .phone {
+        grid-area: phone;
+      }
+      .subject {
+        grid-area: subject;
+      }
+      .message {
+        grid-area: message;
+      }
+      button {
+        grid-area: button;
+      }
+      input,
+      textarea {
+        width: 100%;
+        height: 35px;
+        margin-bottom: 10px;
+        font-family: "Outfit", sans-serif;
+
+        font-size: 20px;
+        color: var(--light-gray);
+        background-color: transparent;
+        border: none;
+        outline: none;
+        border-bottom: 0.5px solid #3a4553;
+        padding-bottom: 10px;
+
+        &:focus {
+          border-bottom-color: #3898ec;
+        }
+        &::placeholder {
+          color: var(--light-gray);
+        }
+      }
+      textarea {
+        height: 100px;
+        resize: none;
+      }
+      button {
+        font-family: "Outfit", sans-serif;
+        font-size: 22px;
+        font-weight: 500;
+        padding: 24px 70px;
+        margin: auto;
+        width: fit-content;
+        text-transform: capitalize;
+        cursor: pointer;
+        transition: var(--main-transition);
+        background-color: var(--white);
+        color: var(--dark-gray);
+        border: 1px solid var(--white);
+
+        &:hover {
+          background-color: transparent;
+          color: var(--white);
+        }
+      }
+      .error {
+        color: #e77878;
+        font-family: "Outfit", sans-serif;
+      }
+    }
+    .received {
+      background-color: var(--white);
+      color: var(--main-yellow);
+      padding: 20px;
+      font-size: 22px;
+      text-align: center;
+    }
+  }
+}
+
+// RESPONSIVE
+@media screen and (max-width: 1279.98px) {
+}
+@media screen and (max-width: 991.98px) {
+  .appointmentSection {
+    padding: 60px 0;
+
+    .container {
+      padding: 40px;
+
+      form {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+          "name"
+          "email"
+          "phone"
+          "subject"
+          "message"
+          "button";
+
+        input {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .appointmentSection .container form {
+    input,
+    textarea {
+      &::placeholder {
+        font-size: 18px;
+      }
+    }
+    button {
+      padding: 20px 30px;
+      font-size: 18px;
+    }
+  }
+}
+@media screen and (max-width: 478.98px) {
+  .appointmentSection .container {
+    padding: 30px 20px;
+  }
+}
