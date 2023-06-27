@@ -44,6 +44,12 @@
   &.white {
     background-color: var(--white);
     color: var(--dark-gray);
+    border: 2px solid var(--white);
+
+    &:hover {
+      background-color: transparent;
+      color: var(--white);
+    }
   }
 
   &.transparent {

@@ -13,7 +13,7 @@ import Footer from "../components/Footer/Footer";
 const Home = () => {
   return (
     <div className="homePage">
-      {/* <HeroSection />
+      <HeroSection />
       <IntroSection />
       <PracticeSection />
       <HelpSection />
@@ -23,7 +23,7 @@ const Home = () => {
       <ConsultationSection />
       <AppointmentSection />
       <RecentBlogsSection />
-      <div className="imgSection"></div> */}
+      <div className="imgSection"></div>
       <Footer />
     </div>
   );
