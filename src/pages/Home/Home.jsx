@@ -8,6 +8,7 @@ import ReviewsSection from "../../components/ReviewsSection/ReviewsSection";
 import TeamSection from "../../components/TeamSection/TeamSection";
 import ConsultationSection from "../../components/ConsultationSection/ConsultationSection";
 import AppointmentSection from "../../components/AppointmentSection/AppointmentSection";
+import RecentBlogsSection from "../../components/RecentBlogsSection/RecentBlogsSection";
 
 const Home = () => {
   return (
@@ -20,7 +21,8 @@ const Home = () => {
       <ReviewsSection />
       <TeamSection />
       <ConsultationSection /> */}
-      <AppointmentSection />
+      {/* <AppointmentSection /> */}
+      <RecentBlogsSection />
     </div>
   );
 };

@@ -1,0 +1,22 @@
+.recentBlogsSection {
+  padding: var(--section-padding);
+  background-color: var(--dark-gray);
+
+  .container {
+    .blogsList {
+      padding-top: 80px;
+      border-top: 1px solid #3a4553;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 70px 25px;
+      align-items: start;
+    }
+  }
+}
+
+// RESPONSIVE
+@media screen and (max-width: 767.98px) {
+  .recentBlogsSection .container .blogsList {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
