@@ -16,7 +16,7 @@ const Home = () => {
       <HeroSection />
       <IntroSection />
       <PracticeSection />
-      <HelpSection />
+      <HelpSection showStats />
       <HistorySection />
       <ReviewsSection />
       <TeamSection />

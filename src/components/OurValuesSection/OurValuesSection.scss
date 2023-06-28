@@ -1,0 +1,72 @@
+.ourValuesSection {
+  padding: var(--section-padding);
+  background-color: var(--dark-gray);
+
+  .container {
+    align-items: flex-start;
+
+    .left {
+      width: 48%;
+      position: sticky;
+      top: 10px;
+
+      .sep {
+        margin: 15px 0 40px;
+      }
+    }
+    .right {
+      width: 48%;
+
+      .ourValuesCard {
+        padding: 70px 60px 60px;
+        background-color: var(--main-gray);
+        margin-bottom: 15px;
+
+        .iconContainer {
+          width: 75px;
+          height: 75px;
+          border-radius: 50%;
+          background-color: var(--dark-gray);
+
+          .icon {
+            font-size: 30px;
+            color: var(--main-yellow);
+          }
+        }
+        h5 {
+          margin: 25px 0 10px;
+        }
+      }
+    }
+  }
+}
+
+// RESPONSIVE
+
+@media screen and (max-width: 991.98px) {
+  .ourValuesSection .container {
+    flex-direction: column;
+
+    .left {
+      width: 100%;
+      position: static;
+    }
+    .right {
+      width: 100%;
+
+      .ourValuesCard {
+        padding: 40px;
+        margin-top: 40px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .ourValuesSection .container {
+    .right {
+      .ourValuesCard {
+        padding: 20px;
+      }
+    }
+  }
+}
