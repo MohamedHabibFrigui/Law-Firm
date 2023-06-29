@@ -6,7 +6,7 @@ import Footer from "../components/Footer/Footer";
 
 const Pricing = () => {
   return (
-    <div className="pricingPagin">
+    <div className="pricingPage">
       <SectionHeader sectionTitle="Pricing" />
       <FeeSection />
       <PricingSection />

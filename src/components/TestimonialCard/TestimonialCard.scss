@@ -1,0 +1,46 @@
+.testimonialCard {
+  background-color: var(--main-gray);
+  padding: 60px;
+  header {
+    margin-bottom: 20px;
+
+    .person {
+      img {
+        width: 84px;
+        height: 84px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin-right: 20px;
+      }
+    }
+    .iconContainer {
+      width: 74px;
+      height: 74px;
+      border-radius: 50%;
+      background-color: var(--dark-gray);
+
+      .quoteIcon {
+        font-size: 35px;
+        color: var(--main-yellow);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1279.98px) {
+  .testimonialCard {
+    padding: 30px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .testimonialCard header {
+    .iconContainer {
+      display: none;
+    }
+  }
+}
+@media screen and (max-width: 478.98px) {
+  .testimonialCard {
+    padding: 20px;
+  }
+}
