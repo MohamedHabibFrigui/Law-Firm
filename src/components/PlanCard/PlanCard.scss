@@ -1,0 +1,56 @@
+.planCard {
+  flex-direction: column;
+  background-color: var(--main-black);
+  padding-bottom: 25px;
+
+  header {
+    width: 100%;
+    padding: 25px;
+    border-bottom: 1px solid #4e555f;
+    text-align: center;
+
+    p {
+      color: var(--main-yellow);
+      font-size: 18px;
+    }
+  }
+  .amount {
+    width: 100%;
+    padding: 25px;
+    text-align: center;
+
+    h3 {
+      color: var(--main-yellow);
+      font-family: "Outfit", sans-serif;
+    }
+    p {
+      padding: 10px 20px;
+      background-color: var(--dark-gray);
+      width: fit-content;
+      margin: 10px auto;
+    }
+  }
+  .list {
+    text-align: center;
+    padding: 0 25px 25px;
+    width: 100%;
+
+    li {
+      border-bottom: 1px solid #4e555f;
+      padding: 20px 0;
+
+      &:first-of-type {
+        border-top: 1px solid #4e555f;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1279.98px) {
+  .planCard {
+    .button {
+      width: calc(100% - 50px);
+      text-align: center;
+    }
+  }
+}

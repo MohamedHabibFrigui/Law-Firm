@@ -1,0 +1,30 @@
+.pricingSection {
+  background-color: var(--dark-gray);
+  padding: var(--section-padding);
+  padding-top: 0;
+
+  .container {
+    header {
+      flex-direction: column;
+
+      .sep {
+        margin: 15px 0 45px;
+      }
+    }
+    .plansList {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+    }
+  }
+}
+
+// RESPONSIVE
+@media screen and (max-width: 1279.98px) {
+  .pricingSection .container {
+    .plansList {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 40px;
+    }
+  }
+}
