@@ -24,7 +24,7 @@ const initialValues = {
   message: "",
 };
 
-const AppointmentSection = () => {
+const AppointmentSection = ({ contactForm }) => {
   const [receivedSubmission, setreceivedSubmission] = useState(false);
 
   const handleSubmit = (values, { setSubmitting }) => {
@@ -36,8 +36,8 @@ const AppointmentSection = () => {
   };
 
   return (
-    <section className="appointmentSection">
-      <div className="container">
+    <section className={`appointmentSection ${contactForm && "contactForm"}`}>
+      <div className={contactForm ? "container formContainer" : "container"}>
         {!receivedSubmission ? (
           <Formik
             initialValues={initialValues}
@@ -54,12 +54,15 @@ const AppointmentSection = () => {
               isSubmitting,
               setSubmitting,
             }) => (
-              <form onSubmit={handleSubmit}>
+              <form
+                className={contactForm && "contactForm"}
+                onSubmit={handleSubmit}
+              >
                 <div className="name">
                   <input
                     type="text"
                     name="name"
-                    placeholder="Full Name*"
+                    placeholder={contactForm ? "Your Name Here" : "Full Name*"}
                     onChange={handleChange}
                     onBlur={handleBlur}
                     value={values.name}
@@ -74,7 +77,9 @@ const AppointmentSection = () => {
                   <input
                     type="email"
                     name="email"
-                    placeholder="Email Address*"
+                    placeholder={
+                      contactForm ? "Your Mail Here" : "Email Address*"
+                    }
                     onChange={handleChange}
                     onBlur={handleBlur}
                     value={values.email}
@@ -87,7 +92,9 @@ const AppointmentSection = () => {
                   <input
                     type="text"
                     name="phone"
-                    placeholder="Phone Number*"
+                    placeholder={
+                      contactForm ? "Your Phone Here" : "Phone Number*"
+                    }
                     onChange={handleChange}
                     onBlur={handleBlur}
                     value={values.phone}
@@ -100,7 +107,9 @@ const AppointmentSection = () => {
                   <input
                     type="text"
                     name="subject"
-                    placeholder="Subject*"
+                    placeholder={
+                      contactForm ? "What Service You Want" : "Subject*"
+                    }
                     onChange={handleChange}
                     onBlur={handleBlur}
                     value={values.subject}
@@ -121,8 +130,12 @@ const AppointmentSection = () => {
                     {errors.message && touched.message && errors.message}
                   </div>
                 </div>
-                <button type="submit">
-                  {isSubmitting ? "Please Wait..." : "Get An Appointment"}
+                <button type="submit" className={contactForm && "contactForm"}>
+                  {isSubmitting
+                    ? "Please Wait..."
+                    : contactForm
+                    ? "Send Message"
+                    : "Get An Appointment"}
                 </button>
               </form>
             )}

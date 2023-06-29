@@ -1,10 +1,18 @@
 .appointmentSection {
   padding: var(--section-padding);
   background: url(/formBg.jpg) 50% 50% / cover no-repeat;
+  &.contactForm {
+    background: var(--dark-gray);
+    padding: 70px 0;
+  }
 
   .container {
     background-color: var(--dark-gray);
     padding: 70px;
+    &.formContainer {
+      width: 100%;
+      padding: 0;
+    }
 
     form {
       display: grid;
@@ -15,7 +23,10 @@
         "phone subject"
         "message message"
         "button button";
-
+      &.contactForm {
+        background-color: var(--main-black);
+        padding: 70px;
+      }
       .name {
         grid-area: name;
       }
@@ -77,6 +88,14 @@
         &:hover {
           background-color: transparent;
           color: var(--white);
+        }
+        &.contactForm {
+          background-color: var(--main-yellow);
+          border-color: var(--main-yellow);
+          &:hover {
+            background-color: transparent;
+            color: var(--main-yellow);
+          }
         }
       }
       .error {

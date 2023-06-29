@@ -1,0 +1,133 @@
+.contactFormSection {
+  padding: var(--section-padding);
+  background-color: var(--dark-gray);
+
+  .container {
+    header {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+
+      & > div {
+        padding: 10px 20px;
+        &:not(:last-of-type) {
+          border-right: 1px solid #4e555f;
+        }
+        h6 {
+          color: var(--main-yellow);
+          margin-bottom: 15px;
+        }
+        p.info {
+          color: var(--white);
+          margin-top: 10px;
+          transition: var(--main-transition);
+          cursor: pointer;
+          &:hover {
+            color: var(--main-yellow);
+          }
+        }
+      }
+    }
+    footer {
+      & > div {
+        background-color: var(--main-black);
+        width: 48%;
+      }
+      .contactInfo {
+        padding: 25px 35px;
+
+        .iconContainer {
+          width: 62px;
+          height: 62px;
+          border-radius: 50%;
+          border: 2px solid var(--main-yellow);
+          margin-right: 10px;
+
+          .icon {
+            font-size: 22px;
+            color: var(--main-yellow);
+          }
+        }
+        .contactRight {
+          .title {
+            color: var(--main-yellow);
+          }
+          p {
+            color: var(--white);
+            &.info {
+              color: var(--white);
+              transition: var(--main-transition);
+              cursor: pointer;
+              &:hover {
+                color: var(--main-yellow);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// RESPONSIVE
+@media screen and (max-width: 1279.98px) {
+  .contactFormSection .container {
+    header {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 20px;
+      & > div {
+        padding: 10px 0;
+        &:not(:last-of-type) {
+          border-right: none;
+        }
+      }
+    }
+    footer {
+      flex-direction: column;
+      & > div {
+        width: 100%;
+        &:first-of-type {
+          flex-direction: column;
+          align-items: flex-start;
+          margin-bottom: 15px;
+        }
+      }
+      .contactInfo {
+        justify-content: flex-start;
+      }
+    }
+  }
+}
+@media screen and (max-width: 991.98px) {
+  .contactFormSection .container {
+    footer {
+      & > div {
+        padding: 40px 20px;
+      }
+      .contactInfo {
+        padding: 20px;
+        &.mainOffice {
+          padding: 40px 20px;
+        }
+        .iconContainer {
+          display: none;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .contactFormSection .container {
+    footer {
+      .contactInfo {
+        padding: 10px 20px;
+
+        .contactRight {
+          .title {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
