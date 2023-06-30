@@ -6,7 +6,7 @@ import { BsFillTelephoneFill } from "react-icons/bs";
 import { MdMail, MdMenu } from "react-icons/md";
 import { useRef } from "react";
 
-const Navbar = () => {
+const Navbar = ({ home }) => {
   const burgerMenu = useRef();
   const links = useRef();
 
@@ -27,10 +27,18 @@ const Navbar = () => {
               <h1>Attorneyster</h1>
             </div>
           </Link>
-          <Button text="Book A Consultation" large={false} type="transparent" />
+          <Button
+            text="Book A Consultation"
+            large={false}
+            type="transparent"
+            to="/contact-us"
+          />
         </header>
         <main className="flexBetween">
-          <nav className="flexBetween" ref={links}>
+          <nav
+            className={`${home ? "flexBetween home" : "flexBetween"}`}
+            ref={links}
+          >
             <NavLink to="/">Home</NavLink>
             <NavLink to="/about">About Us</NavLink>
             <div className="pages">
@@ -41,24 +49,24 @@ const Navbar = () => {
               <div className="mega-menu-content">
                 <ul>
                   <li>
-                    <NavLink to="#">Practice Areas</NavLink>
+                    <NavLink to="/practice-area">Practice Areas</NavLink>
                   </li>
                   <li>
-                    <NavLink to="#">Cases</NavLink>
+                    <NavLink to="/cases">Cases</NavLink>
                   </li>
                   <li>
-                    <NavLink to="#">Pricing</NavLink>
+                    <NavLink to="/pricing">Pricing</NavLink>
                   </li>
                   <li>
-                    <NavLink to="#">Blog</NavLink>
+                    <NavLink to="/blog">Blog</NavLink>
                   </li>
                   <li>
-                    <NavLink to="#">Testimonial</NavLink>
+                    <NavLink to="/testimonial">Testimonial</NavLink>
                   </li>
                 </ul>
               </div>
             </div>
-            <NavLink to="/contact">Contact Us</NavLink>
+            <NavLink to="/contact-us">Contact Us</NavLink>
           </nav>
           <div className="burger-menu" ref={burgerMenu} onClick={handleclick}>
             <MdMenu className="menu-icon" />

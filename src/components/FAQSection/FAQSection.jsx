@@ -75,7 +75,7 @@ const FAQSection = () => {
             <br />
             from us via the following contact number
           </p>
-          <Button type="filled" text="Contact Us" />
+          <Button type="filled" text="Contact Us" to="/contact-us" />
         </footer>
       </div>
     </section>

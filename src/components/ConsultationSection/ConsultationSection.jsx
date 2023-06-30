@@ -14,7 +14,7 @@ const ConsultationSection = () => {
             and we’ll get in touch shortly, or phone between 8:00 am and 7:00 pm
             Monday to Saturday.
           </p>
-          <Button text="Contact Us" type="filled" />
+          <Button text="Contact Us" type="filled" to="/contact-us" />
         </div>
         <div className="right">
           <div className="rightContent">

@@ -173,8 +173,12 @@
         &.visible {
           visibility: visible;
           opacity: 1;
-          top: 330px;
+          top: 450px;
           left: 5%;
+
+          &.home {
+            top: 330px;
+          }
         }
 
         a {
@@ -234,7 +238,10 @@
       width: 90%;
 
       &.visible {
-        top: 320px;
+        top: 450px;
+        &.home {
+          top: 300px;
+        }
       }
     }
     .navContact {
@@ -243,17 +250,29 @@
   }
 }
 @media screen and (max-width: 478.98px) {
-  .navbar header .logo {
-    .logoIcon {
-      height: 50px;
+  .navbar {
+    header .logo {
+      .logoIcon {
+        height: 50px;
 
-      img {
-        height: 100%;
+        img {
+          height: 100%;
+        }
+      }
+
+      h1 {
+        font-size: 40px;
       }
     }
-
-    h1 {
-      font-size: 40px;
+    main {
+      nav {
+        &.visible {
+          top: 400px;
+          &.home {
+            top: 260px;
+          }
+        }
+      }
     }
   }
 }

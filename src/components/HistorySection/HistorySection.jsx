@@ -86,7 +86,7 @@ const HistorySection = () => {
               <div className="progress ninty"></div>
             </div>
           </div>
-          <Button text="Free Consulting" type="filled" />
+          <Button text="Free Consulting" type="filled" to="/contact-us" />
         </div>
       </div>
     </section>

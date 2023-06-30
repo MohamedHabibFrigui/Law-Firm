@@ -1,8 +1,13 @@
+import { Link } from "react-router-dom";
 import "./Button.scss";
 
-const Button = ({ text, large, type }) => {
+const Button = ({ text, large, type, to }) => {
   return (
-    <div className={`button ${large === true && "large"} ${type}`}>{text}</div>
+    <Link to={to}>
+      <div className={`button ${large === true && "large"} ${type}`}>
+        {text}
+      </div>
+    </Link>
   );
 };
 

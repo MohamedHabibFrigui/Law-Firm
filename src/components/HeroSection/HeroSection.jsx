@@ -5,7 +5,7 @@ import Button from "../../components/Button/Button";
 const HeroSection = () => {
   return (
     <section className="heroSection">
-      <Navbar />
+      <Navbar home />
       <div
         className="container flexBetween"
         style={{ height: "100vh", zIndex: 1 }}
@@ -17,7 +17,7 @@ const HeroSection = () => {
             we have helped countless maritime workers and their families go up
             against the largest offshore companies and win.
           </p>
-          <Button text="Get In Touch" type="filled" />
+          <Button text="Get In Touch" type="filled" to="/about" />
         </div>
         <div className="right">
           <img src="person1.png" alt="person" />

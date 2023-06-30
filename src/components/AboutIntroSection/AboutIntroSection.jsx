@@ -35,7 +35,7 @@ const AboutIntroSection = () => {
             <BsInstagram className="socialIcon" />
             <BsPinterest className="socialIcon" />
           </div>
-          <Button text="Get An Appointment" type="white" />
+          <Button text="Get An Appointment" type="white" to="/contact-us" />
         </div>
       </div>
     </section>
