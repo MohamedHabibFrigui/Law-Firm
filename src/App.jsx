@@ -1,5 +1,6 @@
 import "./App.scss";
 import About from "./pages/About";
+import Cases from "./pages/Cases";
 import ContactUs from "./pages/ContactUs";
 import Home from "./pages/Home";
 import Pricing from "./pages/Pricing";
@@ -14,7 +15,8 @@ function App() {
       {/* <Pricing /> */}
       {/* <Testimonial /> */}
       {/* <ContactUs /> */}
-      <RecentBlog />
+      {/* <RecentBlog /> */}
+      <Cases />
     </div>
   );
 }

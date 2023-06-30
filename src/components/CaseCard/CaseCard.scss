@@ -1,0 +1,94 @@
+.caseCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: var(--main-black);
+  &:hover {
+    .img {
+      p {
+        background-color: var(--main-yellow);
+        color: var(--dark-gray);
+      }
+    }
+  }
+
+  .img {
+    position: relative;
+
+    img {
+      max-width: 100%;
+      cursor: pointer;
+    }
+    p {
+      position: absolute;
+      padding: 20px 60px;
+      font-size: 22px;
+      font-weight: 500;
+      color: var(--white);
+      background-color: var(--dark-gray);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%);
+      transition: var(--main-transition);
+    }
+  }
+  .info {
+    padding: 45px;
+
+    h6 {
+      color: var(--white);
+      margin: 15px 0;
+      cursor: pointer;
+      transition: var(--main-transition);
+
+      &:hover {
+        color: var(--main-yellow);
+      }
+    }
+    p {
+      &.date {
+        color: var(--main-yellow);
+      }
+      &.details {
+        width: fit-content;
+        margin-top: 15px;
+        color: var(--main-yellow);
+        font-weight: 500;
+        border-bottom: 1px solid var(--main-yellow);
+        transition: var(--main-transition);
+        cursor: pointer;
+
+        &:hover {
+          color: var(--white);
+          border-color: var(--white);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1279.98px) {
+  .caseCard {
+    .img {
+      p {
+        padding: 20px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 991.98px) {
+  .caseCard {
+    .img {
+      p {
+        top: initial;
+        bottom: 0;
+        left: 0;
+        transform: translate(0);
+        font-size: 18px;
+      }
+    }
+    .info {
+      padding: 30px 20px;
+    }
+  }
+}
