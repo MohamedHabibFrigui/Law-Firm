@@ -2,6 +2,7 @@ import "./App.scss";
 import About from "./pages/About";
 import Cases from "./pages/Cases";
 import ContactUs from "./pages/ContactUs";
+import Error from "./pages/Error";
 import Home from "./pages/Home";
 import PracticeArea from "./pages/PracticeArea";
 import Pricing from "./pages/Pricing";
@@ -18,7 +19,8 @@ function App() {
       {/* <ContactUs /> */}
       {/* <RecentBlog /> */}
       {/* <Cases /> */}
-      <PracticeArea />
+      {/* <PracticeArea /> */}
+      <Error />
     </div>
   );
 }
